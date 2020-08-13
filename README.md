@@ -15,9 +15,14 @@ At the majority of the time when we are at the web we download a bunch of things
     chmod +x install.sh
     sudo ./install.sh
     ```
-After this process you're ready to use the script and to do this just open the terminal and type: **download_organizer**.
 
-### Windows
+## How run it?
+### Linux
+1. Open the Terminal
+2. Type this command:
+   `download_organizer`
+
+### Windows 
 **Still Working on** 
 
 **Note:** If do you want run in the windows, you can edit the script and make it run on Windows while I'm working on. 
@@ -36,11 +41,15 @@ Na maior parte do tempo quando estamos na web fizemos o download de um monte de 
     chmod +x install.sh
     sudo ./install.sh
     ```
-Depois disso, você está pronto para usar o seu organizador do directório Downloads, basta rodar o comando: **download_organizer**. No terminal.
+## Como executar?
+### Linux
+1. Abra o Terminal
+2. Digite este comando:
+   `download_organizer`
 
 ### Windows
 **Ainda trabalhando para instalar no Windows**
 
-If do you want run in the windows, you can edit the script and make it run on Windows while I'm working on. 
+Se você quer rodar no windows, você pode editar o script e fazer com que ele rode no Windows enquanto estou trabalhando nisso.
 
 **Nota:** Se quiser mesmo assim windows, podes fazer as alterações do script e fazer com que ele rode enquanto estou trabalhando nisso!
