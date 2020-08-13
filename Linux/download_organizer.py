@@ -1,15 +1,9 @@
-from os import getlogin
 from shutil import move
 
-USER = getlogin()
-
 # DESTINATION FOLDERS
-MUSIC_FOLDER = f'/home/{USER}/Music'
-PICTURES_FOLDER = f'/home/{USER}/Pictures'
-VIDEOS_FOLDER = f'/home/{USER}/Videos'
-DOCUMENTS_FOLDER = f'/home/{USER}/Documents'
-APPS_FOLDER = f'/home/{USER}/Apps'
+from dest_folders import MUSIC_FOLDER, PICTURES_FOLDER, VIDEOS_FOLDER, DOCUMENTS_FOLDER, APPS_FOLDER, USER
 
+print(MUSIC_FOLDER)
 # Files Extensions
 music_extensions = {'mp3', '3gpp'}
 pictures_extensions = {'jpg', 'png', 'jpeg'}
