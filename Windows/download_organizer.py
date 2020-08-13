@@ -1,13 +1,14 @@
 from shutil import move
 
 # DESTINATION FOLDERS
-from dest_folders import MUSIC_FOLDER, PICTURES_FOLDER, VIDEOS_FOLDER, DOCUMENTS_FOLDER, APPS_FOLDER, TRACK_FOLDER, USER
+from dest_folders import MUSIC_FOLDER, PICTURES_FOLDER, VIDEOS_FOLDER, DOCUMENTS_FOLDER, APPS_FOLDER, USER
 
+print(MUSIC_FOLDER)
 # Files Extensions
-music_extensions = {'mp3', '3gpp', 'wav', 'flac', 'ogg', 'oga', 'mogg', 'm3u', 'acc', 'm4a', 'mpa', 'pls', ''}
-pictures_extensions = {'jpg', 'png', 'jpeg', 'gif', 'gif', 'svg', 'raw', 'tiff'}
-documents_extensions = {'pdf', 'docx', 'doc', 'txt', 'psd', 'ai', 'eps', 'ai', 'indd'}
-videos_extensions = {'mp4', 'm4p', 'm4v', 'webm', 'mpg', 'mp2', 'mpe', 'mpv','mkv', 'avi', 'wmv', 'mov', 'flv', 'swf', 'avchd'}
+music_extensions = {'mp3', '3gpp'}
+pictures_extensions = {'jpg', 'png', 'jpeg'}
+documents_extensions = { 'pdf', 'docx', 'doc', 'txt'}
+videos_extensions = {'mp4', 'webm', 'mkv'}
 apps_extensions = {'deb', 'exec'}
 
 
@@ -47,4 +48,6 @@ def over_view_and_organize():
                 remove(DEST_FOLDER + '/' + file)
                 return over_view_and_organize()
 
+
+TRACK_FOLDER = f'/home/{USER}/Downloads'
 over_view_and_organize()
