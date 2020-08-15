@@ -1,3 +1,16 @@
 #!/bin/bash
 
-python3 /opt/download_organizer/download_organizer.py
+
+USER=${SUDO_USER:-${USER}}
+
+if [[ ! $USER ]];
+then
+    USER=`echo $USERNAME`
+fi
+
+if [[ `id -nu` != $USER ]];
+then
+    exit 1
+fi
+
+python3 /opt/download_organizer/download_organizer.py &
