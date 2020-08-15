@@ -34,9 +34,11 @@ class Handler(FileSystemEventHandler):
     def generate_alternative_name(self, file, DEST_FOLDER):
         actual_file_name = file
 
-        while path.isfile(f'{DEST_FOLDER}/{actual_file_name}'):
-            actual_file_name = 'Copy_' + actual_file_name
-        return f'{DEST_FOLDER}/{actual_file_name}'
+        chdir(DEST_FOLDER)
+
+        while actual_file_name in (element for element in listdir() if path.isfile(element)):
+            actual_file_name = 'Copy ' + actual_file_name
+        return f'{actual_file_name}'
 
     def over_view_and_organize(self):
         chdir(TRACK_FOLDER)
@@ -50,7 +52,10 @@ class Handler(FileSystemEventHandler):
                 try:
                     move(file, DEST_FOLDER)
                 except:
-                    pass
+                    new_file_name = self.generate_alternative_name(file, DEST_FOLDER)
+                    chdir(TRACK_FOLDER)
+                    rename(file, new_file_name)
+                    return self.over_view_and_organize()
 
 event_observer = Observer()
 tracked_event = Handler()
@@ -63,7 +68,7 @@ tracked_event.over_view_and_organize()
 
 try:
     while True:
-        sleep(10)
+        sleep(5)
 except KeyboardInterrupt:
     event_observer.stop()
 
