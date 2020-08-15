@@ -79,7 +79,7 @@ then
 
     su -c download_organizer - $USER
 
-    download_organizer
+    download_organizer start
 else
     echo "You didn't agree with us, sorry about that, hope see you soon :)!"
 fi

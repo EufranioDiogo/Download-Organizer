@@ -3,14 +3,47 @@
 
 USER=${SUDO_USER:-${USER}}
 
-if [[ ! $USER ]];
+if [ $# -eq 1 ]
 then
-    USER=`echo $USERNAME`
+    if [ $1 = "start" ]
+    then
+        if [ -f "/opt/download_organizer/download_organizer_startup.service" ]
+        then
+            mv /opt/download_organizer/download_organizer_startup.service /etc/systemd/system/
+
+            systemctl start download_organizer_startup.service
+        fi
+        echo "download_organizer running!"
+        download_organizer
+    elif [ $1 = "stop" ]
+    then
+        killall /usr/bin/python3 2> /dev/null
+        if [ -f "/etc/systemd/system/download_organizer_startup.service" ]
+        then
+            systemctl stop download_organizer_startup.service
+
+            mv /etc/systemd/system/download_organizer_startup.service /opt/download_organizer
+        fi
+        echo "download_organizer stopped!"
+    else
+        echo "Not Valid Option"
+    fi
+elif [ $# -eq 0 ]
+then
+    if [[ ! $USER ]];
+    then
+        USER=`echo $USERNAME`
+    fi
+
+    if [[ `id -nu` != $USER ]];
+    then
+        exit 1
+    fi
+
+    python3 /opt/download_organizer/download_organizer.py &
+else
+    echo "Invalid quantity of arguments"
 fi
 
-if [[ `id -nu` != $USER ]];
-then
-    exit 1
-fi
 
-python3 /opt/download_organizer/download_organizer.py &
+
