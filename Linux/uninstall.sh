@@ -32,6 +32,8 @@ else
     echo "The service doesn't exists"
 fi
 
-systemctl stop download_organizer_startup.service
+killall /usr/bin/python3 2> /dev/null
+
+systemctl daemon-reload
 
 echo "download_organizer was succefully deleted! :)"

@@ -40,6 +40,15 @@ class Handler(FileSystemEventHandler):
             actual_file_name = 'Copy ' + actual_file_name
         return f'{actual_file_name}'
 
+    def delete_every_not_needed_file(self):
+        for dir in [APPS_FOLDER, DOCUMENTS_FOLDER, MUSIC_FOLDER, VIDEOS_FOLDER, PICTURES_FOLDER]:
+            chdir(dir)
+            files = (file for file in listdir() if path.isfile(file) == True)
+
+            for file in files:
+                if path.getsize(path.join(dir, file)) == 0:
+                    remove(file)
+
     def over_view_and_organize(self):
         chdir(TRACK_FOLDER)
 
@@ -56,6 +65,7 @@ class Handler(FileSystemEventHandler):
                     chdir(TRACK_FOLDER)
                     rename(file, new_file_name)
                     return self.over_view_and_organize()
+        self.delete_every_not_needed_file()
 
 event_observer = Observer()
 tracked_event = Handler()
