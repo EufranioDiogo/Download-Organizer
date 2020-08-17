@@ -32,7 +32,7 @@ Track the Downloads folder and put every files that appear right there at the ri
   1. Open the Terminal, typing Terminal at your apps menu or press those keys: **<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>t</kbd>**
   2. Navitage to **Download Organizer** folder and after enter at **Linux** folder.
   3. After you're already at the Linux folder type those commands bellow:
-         ```
+        ```
         chmod +x uninstall.sh
         sudo ./uninstall.sh
         ```
@@ -88,7 +88,7 @@ Controlar o directório Downloads(Transferência) e colocar todos os ficheiros q
   1. Abra o Terminal, digitando Terminal no menu de aplicações ou pressione as teclas: **<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>t</kbd>**
   2. Navegue para o directório **Download Organizer** e depois entre no directório **Linux**.
   3. Depois de estar no directório Linux digite os seguintes comandos abaixo:
-         ```
+        ```
         chmod +x uninstall.sh
         sudo ./uninstall.sh
         ```
