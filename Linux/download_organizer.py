@@ -2,8 +2,8 @@ from shutil import move
 from time import sleep
 from src.watchdog.observers import Observer
 from src.watchdog.events import FileSystemEventHandler
-from file_extensions import music_exten, pictures_exten, documents_exten, videos_exten, apps_exten
-from dest_folders import MUSIC_FOLDER, PICTURES_FOLDER, VIDEOS_FOLDER, DOCUMENTS_FOLDER, APPS_FOLDER, TRACK_FOLDER
+from file_extensions import music_exten, pictures_exten, documents_exten, videos_exten
+from dest_folders import MUSIC_FOLDER, PICTURES_FOLDER, VIDEOS_FOLDER, DOCUMENTS_FOLDER, TRACK_FOLDER
 from os import listdir, chdir, remove, path, rename
 
 
@@ -27,8 +27,6 @@ class Handler(FileSystemEventHandler):
                 return DOCUMENTS_FOLDER
             if file_extension in videos_exten:
                 return VIDEOS_FOLDER
-            if file_extension in apps_exten:
-                return  APPS_FOLDER
         return 'Unknow'
 
     def generate_alternative_name(self, file, DEST_FOLDER):
@@ -41,7 +39,7 @@ class Handler(FileSystemEventHandler):
         return f'{actual_file_name}'
 
     def delete_every_not_needed_file(self):
-        for dir in [APPS_FOLDER, DOCUMENTS_FOLDER, MUSIC_FOLDER, VIDEOS_FOLDER, PICTURES_FOLDER]:
+        for dir in [DOCUMENTS_FOLDER, MUSIC_FOLDER, VIDEOS_FOLDER, PICTURES_FOLDER]:
             chdir(dir)
             files = (file for file in listdir() if path.isfile(file) == True)
 
