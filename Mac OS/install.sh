@@ -1,0 +1,85 @@
+#!/bin/bash
+
+USER=${SUDO_USER:-${USER}}
+INSTALLATION_DIRECTORY="/opt/download_organizer"
+
+echo "Hi :) You're installing the download_organizer"
+echo ""
+read -p "Do you agree with every changes and License of this script amplies [Y/n]: " user_answer
+
+echo ""
+
+if [[ "$user_answer" = "Y" || "$user_answer" = "y" ]]
+then
+    if [ ! -d "$INSTALLATTION_DIRECTORY" ]
+    then
+        echo "Creating the folder $INSTALLATION_DIRECTORY it will be where main configurations are installed"
+        echo
+        mkdir $INSTALLATION_DIRECTORY
+    else
+        echo "Removing existents configurations at $INSTALLATION_DIRECTORY"
+        rm -r $INSTALLATION_DIRECTORY
+        mkdir $INSTALLATION_DIRECTORY
+        echo "Creating the folder $INSTALLATION_DIRECTORY it will be where main configurations are installed"
+        echo
+    fi
+
+    echo "Copying every files from $PWD to $INSTALLATION_DIRECTORY"
+    #Moving the Scripts to the INSTALLATION_DIRECTORY
+    cp -r * $INSTALLATION_DIRECTORY
+    chmod 755 -R /opt/download_organizer
+    chown $USER -R /opt/download_organizer
+    echo "Copying process concluded!"
+    echo
+
+    #Moving the SHELL SCRIPT(COMMAND) to the /bin directory
+    echo "Creating the command manual: download_organizer"
+    chmod +x download_organizer
+    cp download_organizer /bin
+    chown $USER /bin/download_organizer
+    echo "Command succefully created!"
+    echo
+
+    #Creating the service
+    service_file="/etc/systemd/system/download_organizer_startup.service"
+
+    echo "Creating a service to auto run the script every time that you login to computer"
+    echo "[Unit]" > $service_file
+    echo "Description=Run the download_organizer a service that organize the download folder" >> $service_file
+    echo "DefaultDependencies=no" >> $service_file
+    echo "After=network.target" >> $service_file
+
+    echo "" >> $service_file
+    echo "[Service]" >> $service_file
+    echo "Type=simple" >> $service_file
+    echo "User=$USER" >> $service_file
+    echo "ExecStart=/bin/download_organizer" >> $service_file
+    echo "TimeoutStartSec=0" >> $service_file
+    echo "RemainAfterExit=yes" >> $service_file
+    
+    echo "" >> $service_file
+    echo "[Install]" >> $service_file
+    echo "WantedBy=multi-user.target" >> $service_file
+    echo "Service created at $service_file"
+    echo
+
+    echo "Enabling service to startup on boot!"
+    systemctl daemon-reload
+    systemctl enable download_organizer_startup.service
+    systemctl start download_organizer_startup.service
+    echo "Enabled"
+    echo
+
+    echo "Please report me if you got an error: eufraniodiogo5@gmail.com"
+
+    echo
+
+    echo "You're ready to go try to download or move a folder to download folder and see what's happens!"
+    echo "download_organizer installed! Thanks to download!"
+
+    su -c download_organizer - $USER
+
+    download_organizer start
+else
+    echo "You didn't agree with us, sorry about that, hope see you soon :)!"
+fi
