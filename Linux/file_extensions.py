@@ -1,6 +1,6 @@
 music_exten = {'mp3', '3gpp', 'wav', 'flac', 'ogg',
 'oga', 'mogg', 'm3u', 'acc', 'm4a',
-'mpa', 'pls', 'acc'}
+'mpa', 'pls', 'acc', 'mpeg'}
 
 pictures_exten = {'jpg', 'png', 'jpeg', 'gif', 'svg',
 'raw', 'tiff'}

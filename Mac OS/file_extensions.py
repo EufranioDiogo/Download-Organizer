@@ -1,9 +1,15 @@
-music_exten = {'mp3', '3gpp', 'wav', 'flac', 'ogg',
-'oga', 'mogg', 'm3u', 'acc', 'm4a',
-'mpa', 'pls', 'acc'}
+"""
 
-pictures_exten = {'jpg', 'png', 'jpeg', 'gif', 'svg',
-'raw', 'tiff'}
+"""
+
+music_exten = {
+'mp3', '3gpp', 'wav', 'flac', 'ogg',
+'oga', 'mogg', 'm3u', 'acc', 'm4a',
+'mpa', 'pls', 'aac'}
+
+pictures_exten = {
+'jpg', 'png', 'jpeg', 'gif', 'svg',
+'raw', 'tiff', 'webp'}
 
 documents_exten = {'pdf', 'docx', 'doc', 'txt', 'psd',
 'ai', 'eps', 'ai', 'indd'}

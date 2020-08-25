@@ -11,3 +11,9 @@ documents_exten = {'pdf', 'docx', 'doc', 'txt', 'psd',
 videos_exten = {'mp4', 'm4p', 'm4v', 'webm', 'mpg',
 'mp2', 'mpe', 'mpv','mkv', 'avi',
 'wmv', 'mov', 'flv', 'swf', 'avchd'}
+"""
+Dev Fronted - Projecto Paralisado
+Designer - Empresa/Startup que te chamou
+Fronted - Projecto Pessoal
+Lider e isso incompora actividades de designer e muitas mais - Delicias Rya
+"""
