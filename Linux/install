@@ -34,9 +34,9 @@ then
 
     #Moving the SHELL SCRIPT(COMMAND) to the /bin directory
     echo "Creating the command manual: download_organizer"
-    chmod +x download_organizer
-    cp download_organizer /bin
-    chown $USER /bin/download_organizer
+    chmod +x downloadorganizer
+    cp downloadorganizer /bin
+    chown $USER /bin/downloadorganizer
     echo "Command succefully created!"
     echo
 
@@ -77,9 +77,9 @@ then
     echo "You're ready to go try to download or move a folder to download folder and see what's happens!"
     echo "download_organizer installed! Thanks to download!"
 
-    su -c download_organizer - $USER
+    su -c downloadorganizer - $USER
 
-    download_organizer start
+    downloadorganizer start
 else
     echo "You didn't agree with us, sorry about that, hope see you soon :)!"
 fi

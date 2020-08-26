@@ -25,9 +25,10 @@ then
             mv /etc/systemd/system/download_organizer_startup.service /opt/download_organizer
         fi
         echo "download_organizer stopped!"
-    elif [ $1 = "uninstall"]
+    elif [ $1 = "uninstall" ]
     then
-        /opt/download_organizer/./uninstall
+        cd /opt/download_organizer/
+        ./uninstall
     else
         echo "Not Valid Option"
     fi

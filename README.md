@@ -5,37 +5,28 @@
 <h2>Script propose</h2>
 <p>Track the Downloads folder of your computer and put every file in the correct folder.</p>
 
-<h2>What Do I need to get It?</h2>
-You need to have Python installed.
-
 <h2>How Install it at your computer?</h2>
 <strong>Linux</strong>
 <ul>
   <li>Download the Package.</li>
   <li>Unpack the Package.</li>
   <li>Enter to your terminal and go to the folder <strong>Linux</strong> inside de package.</li>
-  <li>Run those commands:
-
-        chmod +x install.sh
-        sudo ./install.sh
-  </li>
+  <li>Run this command: <code>sudo ./install</code></li>
 </ul>
 
 <h2>How Uninstall it at your computer?</h2>
 <strong>Linux</strong>
+<p><code>sudo download_organizer uninstall</code></p>
 
-Run this command in your terminal: `sudo download_organizer uninstall`.
-
-### How Can I stop the script while it's already running?
+<h2>How Can I stop the script while it's already running?</h2>
 <strong>Linux</strong>
+<p><code>sudo download_organizer stop</code></p>
 
-Run this command in your terminal: `sudo download_organizer stop`.
-
-### How Can I run the script while it's stopped?
+<h2>How Can I run the script while it's stopped?</h2>
 <strong>Linux</strong>
+<p><code>sudo download_organizer start</code></p>
 
-Run this command in your terminal: `sudo download_organizer start`.
-
+<p><strong>Requirement:</strong> python3.X(any version of python3)</p>
 <p>What about mac Os and Windows?</p>
 <p>I'm still studying how can implement this on those operating systems.</p>
 <hr>

@@ -13,10 +13,10 @@ else
 fi
 
 
-echo "Deleting the command: download_organizer"
-if [ -f "/bin/download_organizer" ]
+echo "Deleting the command: downloadorganizer"
+if [ -f "/bin/downloadorganizer" ]
 then
-    rm  "/bin/download_organizer"
+    rm  "/bin/downloadorganizer"
     echo "Command Deleted!"
 else
     echo "The command already don't exists"
@@ -36,4 +36,4 @@ killall /usr/bin/python3 2> /dev/null
 
 systemctl daemon-reload
 
-echo "download_organizer was succefully deleted! :)"
+echo "downloadorganizer was succefully deleted! :)"
