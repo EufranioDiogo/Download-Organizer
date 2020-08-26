@@ -17,7 +17,7 @@ class Handler(FileSystemEventHandler):
     def find_dest_folder(self, file):
         if '.' in file:
             file_extension = file.split('.')
-            file_extension = file_extension[-1]
+            file_extension = file_extension[-1].lower()
 
             if file_extension in music_exten:
                 return MUSIC_FOLDER

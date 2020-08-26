@@ -75,7 +75,7 @@ then
     echo
 
     echo "You're ready to go try to download or move a folder to download folder and see what's happens!"
-    echo "download_organizer installed! Thanks to download!"
+    echo "downloadorganizer installed! Thanks to download!"
 
     su -c downloadorganizer - $USER
 
