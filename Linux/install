@@ -33,7 +33,7 @@ then
     echo
 
     #Moving the SHELL SCRIPT(COMMAND) to the /bin directory
-    echo "Creating the command manual: download_organizer"
+    echo "Creating the command manual: downloadorganizer"
     chmod +x downloadorganizer
     cp downloadorganizer /bin
     chown $USER /bin/downloadorganizer
@@ -53,7 +53,7 @@ then
     echo "[Service]" >> $service_file
     echo "Type=simple" >> $service_file
     echo "User=$USER" >> $service_file
-    echo "ExecStart=/bin/download_organizer" >> $service_file
+    echo "ExecStart=/bin/downloadorganizer" >> $service_file
     echo "TimeoutStartSec=0" >> $service_file
     echo "RemainAfterExit=yes" >> $service_file
     
