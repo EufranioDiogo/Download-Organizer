@@ -13,7 +13,7 @@ if 'en' in language:
     DOCUMENTS_FOLDER = f'{HOME}/Documents'
 elif 'pt' in language:
     TRACK_FOLDER = f'{HOME}/Transferências'
-    MUSIC_FOLDER = f'{HOME}/Musicas'
+    MUSIC_FOLDER = f'{HOME}/Músicas'
     PICTURES_FOLDER = f'{HOME}/Imagens'
     VIDEOS_FOLDER = f'{HOME}/Vídeos'
     DOCUMENTS_FOLDER = f'{HOME}/Documentos'
