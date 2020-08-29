@@ -8,7 +8,7 @@ from file_extensions import music_exten, pictures_exten, documents_exten, videos
 def find_dest_folder(file):
     if '.' in file:
         file_extension = file.split('.')
-        file_extension = file_extension[-1]
+        file_extension = file_extension[-1].lower()
 
         if file_extension in music_exten:
             return MUSIC_FOLDER

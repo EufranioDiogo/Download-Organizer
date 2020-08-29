@@ -1,19 +1,38 @@
 from locale import getdefaultlocale
-from os import getenv
+from os import getenv, path
 
 HOME = getenv('HOME')
 
 language = getdefaultlocale()[0].lower()
 
+def validate_folder(list_of_folders):
+    for index in range(len(list_of_folders)):
+        if not path.isdir(list_of_folders[index]):
+            if list_of_folders[index][-1].lower() != 's':
+                if path.isdir(list_of_folders[index] + 's'):
+                    list_of_folders[index] = list_of_folders[index] + 's'
+                    continue
+            list_of_folders[index] = f'{list_of_folders[index].split("/")[-1]} folder doesn\'t exist'
+    return list_of_folders
+
+
 if 'en' in language:
     TRACK_FOLDER = f'{HOME}/Downloads'
-    MUSIC_FOLDER = f'{HOME}/Music'
-    PICTURES_FOLDER = f'{HOME}/Pictures'
-    VIDEOS_FOLDER = f'{HOME}/Videos'
-    DOCUMENTS_FOLDER = f'{HOME}/Documents'
+    if not path.isdir(TRACK_FOLDER):
+        TRACK_FOLDER = 'Error'
+    folder_list = validate_folder([f'{HOME}/Music', f'{HOME}/Pictures', f'{HOME}/Videos', f'{HOME}/Documents'])
+
+    MUSIC_FOLDER = folder_list[0]
+    PICTURES_FOLDER = folder_list[1]
+    VIDEOS_FOLDER = folder_list[2]
+    DOCUMENTS_FOLDER = folder_list[3]
 elif 'pt' in language:
     TRACK_FOLDER = f'{HOME}/Transferências'
-    MUSIC_FOLDER = f'{HOME}/Músicas'
-    PICTURES_FOLDER = f'{HOME}/Imagens'
-    VIDEOS_FOLDER = f'{HOME}/Vídeos'
-    DOCUMENTS_FOLDER = f'{HOME}/Documentos'
+    if not path.isdir(TRACK_FOLDER):
+        TRACK_FOLDER = 'Error'
+    folder_list = validate_folder([f'{HOME}/Música', f'{HOME}/Imagens', f'{HOME}/Vídeos', f'{HOME}/Documentos'])
+
+    MUSIC_FOLDER = folder_list[0]
+    PICTURES_FOLDER = folder_list[1]
+    VIDEOS_FOLDER = folder_list[2]
+    DOCUMENTS_FOLDER = folder_list[3]
