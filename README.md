@@ -28,5 +28,5 @@
 
 <p><strong>Requirement:</strong> python3.X(any version of python3)</p>
 <p>What about mac Os and Windows?</p>
-<p>I'm still studying how can implement this on those operating systems.</p>
+<p>Not working on that right now! But if do you want colaborate, please do this</p>
 <hr>
