@@ -28,5 +28,7 @@
 
 <p><strong>Requirement:</strong> python3.X(any version of python3)</p>
 <p>What about mac Os and Windows?</p>
-<p>Not working on that right now! But if do you want colaborate, please do this</p>
+<p>Not working on that right now! But if do you want colaborate, please keep reading.</p>
+<p>If do you want work at the windows version please work at the branch <strong>windows</strong> and do the pull request right there.</p>
+<p>If do you want work at the Mac Os version please work at the branch <strong>MacOs</strong> and do the pull request right there.</p>
 <hr>
