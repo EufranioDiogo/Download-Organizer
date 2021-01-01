@@ -1,30 +1,35 @@
+<table>
+  <tr>
+    <th>Português</th>
+    <th>English</th>
+  </tr>
+  <tr>
+    <td><a href="README_Portugues.md">Ler</a></td>
+    <td><a href="README.md">Read</a></td>
+  </tr>
+</table>
+
 # Download Organizer
 
-<p>At majority of the time when we are navigating through Internet we download a lot of stuff and consequently we fill up our Download folder with a lot of things like music, pictures, videos and so on. Because of it I decided to put the hands on it and try to give a solution to this huge problem that I also have. </p>
+At majority of the time when we are navigating through Internet we download a lot of stuff and consequently we fill up our Download folder with a lot of things like music, pictures, videos and so on. Because of it I decided to put the hands on it and try to give a solution to this huge problem that I also have.
 
-<h2>Script propose</h2>
-<p>Track the Downloads folder of your computer and put every file in the correct folder.</p>
+## Script propose
+Track the Downloads folder of your computer and put every file in the correct folder.
 
-<h2>How Install it at your computer?</h2>
-<strong>Linux</strong>
-<ul>
-  <li>Download the Package.</li>
-  <li>Unpack the Package.</li>
-  <li>Enter to your terminal and go to the folder <strong>Linux</strong> inside de package.</li>
-  <li>Run this command: <code>sudo ./install</code></li>
-</ul>
+## How Install it at your computer?
+  - Download the Package.
+  - Unpack.
+  - Open de terminal.
+  - Run this command: `sudo ./install`
 
-<h2>How Uninstall it at your computer?</h2>
-<strong>Linux</strong>
-<p><code>sudo download_organizer uninstall</code></p>
+## How Uninstall it at your computer?
+  - Open the terminal a type: `sudo downloadorganizer uninstall`
 
-<h2>How Can I stop the script while it's already running?</h2>
-<strong>Linux</strong>
-<p><code>sudo download_organizer stop</code></p>
+## How Can I stop the script while it's already running?
+  - Open the terminal a type: `sudo downloadorganizer stop`
 
-<h2>How Can I run the script while it's stopped?</h2>
-<strong>Linux</strong>
-<p><code>sudo download_organizer start</code></p>
+## How Can I run the script while it's stopped?
+  - Open the terminal a type: `sudo downloadorganizer start`
 
 <p><strong>Requirement:</strong> python3.X(any version of python3)</p>
 <p>What about mac Os and Windows?</p>
