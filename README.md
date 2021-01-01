@@ -4,36 +4,35 @@
     <th>English</th>
   </tr>
   <tr>
-    <td><a href="README_Portugues.md">Ler</a></td>
-    <td><a href="README.md">Read</a></td>
+    <td><a href="#">Ler</a></td>
+    <td><a href="README_Englis.md">Read</a></td>
   </tr>
 </table>
 
 # Download Organizer
 
-At majority of the time when we are navigating through Internet we download a lot of stuff and consequently we fill up our Download folder with a lot of things like music, pictures, videos and so on. Because of it I decided to put the hands on it and try to give a solution to this huge problem that I also have.
+Na maior parte do tempo quando estamos navegando pela Internet, baixamos várias coisas e acaba que a nossa pasta de downloads fica insustavel de gerir cheia de vídeos, músicas, fotos e muito mais, por isso criei o **downloadorganizer** programa feito para automaticamente organizar os seus arquivos baixados.  
 
-## Script propose
-Track the Downloads folder of your computer and put every file in the correct folder.
+## Como instalar?
+  - Transferir o pacote.
+  - Descompactar.
+  - Abrir o terminal.
+  - Rodar o comando: `sudo ./install`
 
-## How Install it at your computer?
-  - Download the Package.
-  - Unpack.
-  - Open de terminal.
-  - Run this command: `sudo ./install`
+## Como desinstalar?
+  - Abra o terminal e digite: `sudo downloadorganizer uninstall`
 
-## How Uninstall it at your computer?
-  - Open the terminal a type: `sudo downloadorganizer uninstall`
+## Como parar o programa?
+  - Abra o terminal e digite: `sudo downloadorganizer stop`
 
-## How Can I stop the script while it's already running?
-  - Open the terminal a type: `sudo downloadorganizer stop`
+## Como rodar novamente quando parado?
+  - Abra o terminal e digite: `sudo downloadorganizer start`
 
-## How Can I run the script while it's stopped?
-  - Open the terminal a type: `sudo downloadorganizer start`
+<p><strong>Dependência:</strong> python3.X(Qualquer versão do python3)</p>
+<p>E o mac e o Windows?</p>
+<p>Não estou trabalhando nelas, mas se quiser contribuir continue lendo.</p>
 
-<p><strong>Requirement:</strong> python3.X(any version of python3)</p>
-<p>What about mac Os and Windows?</p>
-<p>Not working on that right now! But if do you want colaborate, please keep reading.</p>
-<p>If do you want work at the windows version please work at the branch <strong>windows</strong> and do the pull request right there.</p>
-<p>If do you want work at the Mac Os version please work at the branch <strong>MacOs</strong> and do the pull request right there.</p>
-<hr>
+## Contribuindo para Windows/MAC OS
+    1. Faça um fork do repositório.
+    2. Crie uma branch nomeada windows-[seu-nome]/mac-[seu-nome]
+    3. Trabalhe por cima dela e faça o pullrequest
